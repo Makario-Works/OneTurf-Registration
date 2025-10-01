@@ -52,24 +52,28 @@ const CreateAccount2 = () => {
       ...data,
     };
 
-    try {
-      const res = await fetch("https://oneturfapi.makarioworks.com/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(userData),
-      });
+    // try {
+    //   const res = await fetch("http://localhost:8000/", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(userData),
+    //   });
 
-      if (res.ok) {
-        alert("Account created! Now login.");
-        localStorage.removeItem("signup-step1");
-        navigate("/pages/VerifyAccount");
-      } else {
-        alert("Failed to create account");
-      }
-    } catch (err) {
-      console.error(err);
-      alert("Server error, please try again.");
-    }
+    //   if (res.ok) {
+    //     alert("Account created! Now login.");
+    //     localStorage.removeItem("signup-step1");
+    //     navigate("/pages/VerifyAccount");
+    //   } else {
+    //     alert("Failed to create account");
+    //   }
+    // } catch (err) {
+    //   console.error(err);
+    //   alert("Server error, please try again.");
+    // }
+     localStorage.setItem("user", JSON.stringify(userData));
+
+    alert("Account created! Now login.");
+    navigate("/pages/VerifyAccount");
   };
 
   return (

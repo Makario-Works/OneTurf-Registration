@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const schema = yup.object().shape({
@@ -14,8 +15,10 @@ const schema = yup.object().shape({
 });
 
 const Login = () => {
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const {
     register,
@@ -25,30 +28,40 @@ const Login = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async (data) => {
-    setLoading(true);
+  // const onSubmit = /*async (data)*/ (e) => {
+  //   setLoading(true);
 
-     try {
-      const res = await fetch("https://oneturfapi.makarioworks.com/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+  //    try {
+  //     const res = await fetch("https://oneturfapi.makarioworks.com/", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(data),
+  //     });
 
-      if (res.ok) {
-        const result = await res.json();
-        localStorage.setItem("token", result.token);
+  //     if (res.ok) {
+  //       const result = await res.json();
+  //       localStorage.setItem("token", result.token);
 
-        alert("Login successful!");
-        navigate("/pages/dashboard");
-      } else {
-        alert("Invalid email or password");
-      }
-    } catch (err) {
-      console.error(err);
-      alert("Server error, please try again.");
-    } finally {
-      setLoading(false);
+  //       alert("Login successful!");
+  //       navigate("/pages/Admin/Dashboard");
+  //     } else {
+  //       alert("Invalid email or password");
+  //     }
+  //   } catch (err) {
+  //     console.error(err);
+  //     alert("Server error, please try again.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+       const onSubmit = async (data) => {
+          
+    const savedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (savedUser && savedUser.email === email && savedUser.password === password) {
+      alert("Login successful 🎉");
+      navigate("pages/Admin/AdminLayout");// or any protected route
+    } else {
+      alert("Invalid email or password");
     }
 
   };
@@ -65,18 +78,22 @@ const Login = () => {
             <form  onSubmit={handleSubmit(onSubmit)}>
                 
                 <label>Email:</label>
-                <input type="email" {...register("email")}  placeholder ='sample@oneturf.com' />
+                {/* <input type="email" {...register("email")}  placeholder ='sample@oneturf.com' /> */}
+                 <input type="email" {...register("email")} value={email} onChange={(e) => setEmail(e.target.value)} required />
                 <p className="error">{errors.email?.message}</p>
 
 
                 <label>Password:</label>
-                <input
+                {/* <input
                 type="password" {...register("password")}
-                />
-                 <p className="error">{errors.password?.message}</p>
+                /> */}
+                <input type="password" {...register("password")} value={password} onChange={(e) => setPassword(e.target.value)} required />
+                 {/* <p className="error">{errors.password?.message}</p>
                  <button type="submit" disabled={loading}>
                   {loading ? "Logging in..." : "Login"}
-                </button>
+                </button> */}
+                 <button type="submit">Login</button>
+                 <Link to="/pages/CreateAccount">Sign Up </Link>
             </form>
 
         </div>

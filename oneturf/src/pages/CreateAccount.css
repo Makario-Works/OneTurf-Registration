@@ -97,6 +97,10 @@ form{
 .wrapper button:hover{
     background-color:#063b9c ;
 }
+.wrapper a{
+    text-decoration: none;
+    text-align: center;
+}
 
 .react-tel-input {
     margin-bottom: 12px;
