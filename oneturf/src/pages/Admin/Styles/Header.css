@@ -1,0 +1,46 @@
+.header-wrapper{
+    position: fixed;
+    top: 0;
+    right:  0;
+    left: 0;
+    z-index: 1000;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+   align-items: center;
+    padding: 5px 29px ;
+}
+.header-wrapper .left{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding-right: 20px;
+}
+.left img{
+    width: 47px;
+    height: 47px;
+}
+
+.left p{
+    font-weight: 600;
+}
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .left p {
+    display: none;
+  }
+}
+
+

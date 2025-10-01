@@ -20,7 +20,7 @@ export const VerifyAccount = () => {
             </div>
             <h3 className="title">Verify email</h3>
             <p className='description'> A verification link has been sent to <span>johndoe@gmail.com</span>  <br /><br /> Please click the link to verify your account.</p>
-            <Link style={{ textDecoration: 'none'}} to= "/pages/Login" ><button>Log in</button> </Link>
+            <Link style={{ textDecoration: 'none'}} to= "/" ><button>Log in</button> </Link>
         </div>
     </div>
   )

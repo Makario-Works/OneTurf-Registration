@@ -1,0 +1,419 @@
+.estate-container{
+    padding-right: 30px;
+}
+
+.estate-container h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.estate-cards{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+
+.estate-cards .card{
+    padding: 15px; 
+    border-radius: 12px;
+    width: 120px;
+    line-height: 20px;
+     box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+.estate-cards span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: #43CD8B;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.estate-cards .num{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.estate-cards  .total{
+    color: #fff;
+    background-color: #000;
+}
+.total .title {
+     color: #fff;
+     font-weight: 600;
+     font-size: 14px;
+}
+.estate-cards  .houses,.residents {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.houses,.residents .title {
+    font-weight: 600;
+}
+.estate-list {
+  margin-top: 20px;
+}
+
+.estate-middle-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.estate-middle-item h2{
+    margin-bottom: 20px;
+}
+.estate-middle-item .search-bar{
+    background: inherit;
+    border-radius: 50px;
+    border: 1px solid #A0A4A8;
+    padding: 8px 12px ;
+    outline-color: #1769FF;
+    font-size: 14px;
+   
+}
+.add-estate-btn{
+     background: #1769FF;
+     color: #fff;
+     border: none;
+     border-radius: 30px;
+     padding: 10px 30px;
+}
+.indicator {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.indicator svg {
+  margin-right: 4px;
+}
+
+.indicator.up {
+  color: green;
+}
+
+.indicator.down {
+  color: red;
+}
+
+.indicator.neutral {
+  color: gray;
+}
+
+.empty-state {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 200px; 
+
+}
+
+.empty-state img {
+  max-width: 90px;
+}
+
+.empty-state button {
+  padding: 10px 20px;
+  background: #007bff;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.empty-state button:hover {
+  background: #0056b3;
+}
+
+
+.estate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.estate-card {
+  width: 220px;
+  height: 280px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.estate-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.add-estate-card{
+  height: 280px;
+  width: 220px;
+  background: #1769FF;
+  color: #fff;
+  text-align: center;
+  align-content: center ;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.estate-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+
+}
+
+.estate-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.estate-name {
+  font-size:20px;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #1a1a1a;
+
+}
+
+.estate-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.learn-more {
+  color: #007bff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  max-width: 90%;
+}
+.modal label{
+  font-size: 14px;
+}
+
+.modal-content h3 {
+  margin: 0px 0 30px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-content form input, select {
+    width: 100%;
+    height: 50px;
+    background: #F3F3F8;
+    border: none;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    margin:2px 0 12px  0;
+    font-size: 14px;
+}
+.modal-content .state-info{
+  display: flex;
+  gap: 20px;
+}
+
+.modal-content .state-info .info-row{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content .state-info input{
+  width:162px;
+}
+
+.modal-content form button {
+   padding: 15px 20px;
+  background: #007bff;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-content form button {
+  background: #007bff;
+  color: #fff;
+  
+}
+.modal-content.success {
+  text-align: center;
+  padding: 30px;
+  max-width: 350px;
+  
+}
+
+.modal-content.success .checkmark {
+  font-size: 150px;
+  color: #0d6efd;
+  
+}
+
+.modal-content.success p {
+  font-size: 22px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.modal-content.success button {
+  padding: 15px 20px;
+  background: #007bff;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .estate-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .estate-cards .card {
+    width: 45%; 
+    min-width: 150px;
+  }
+
+  .estate-middle-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .estate-middle-item .search-bar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .estate-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .estate-cards .card {
+    width: 100%;
+  }
+
+  .estate-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .estate-card {
+    width: 100%;
+    height: auto;
+  }
+  .add-estate-card{
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .modal-content .state-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-content .state-info input {
+    width: 100%;
+  }
+
+  .empty-state {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0; /* remove rounded corners */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .modal-content h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .modal-content form input,
+  .modal-content form select {
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .modal-content form button {
+    margin-top: auto;
+    height: 50px;
+    font-size: 16px;
+  }
+}

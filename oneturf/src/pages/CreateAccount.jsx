@@ -53,8 +53,7 @@ import { ReactComponent as SVGIcon } from '../Asset/logo.svg' ;
                   required
                 >
                   <option value="">-- Select Category --</option>
-                  <option value="Automotive">Landlord</option>
-                  <option value="Technology">Tenant</option>
+                  <option value="Security">Security</option>
                   <option value="Healthcare">vendor</option>
                 </select>
                 <label>Company Name:</label>

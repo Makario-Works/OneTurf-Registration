@@ -22,8 +22,9 @@ function App() {
           <Route path= "/pages/CreateAccount2" element={<CreateAccount2 />} />
           <Route path= "/pages/VerifyAccount" element={<VerifyAccount />} />
           
-          <Route path="/pages/Admin/AdminLayout" element= {< AdminLayout />} >
+          <Route path="/pages/Admin/DashBoard" element= {< AdminLayout />} >
           <Route index element={<DashBoard />} />
+          <Route path= "DashBoard" element={<DashBoard />} />
           <Route path= "Estate" element={<Estate />} />
           <Route path= "Marketplace" element={<MarketPlace />} />
           <Route path= "Billing" element={<Billing />} />

@@ -51,8 +51,11 @@ form{
     padding: 6px 10px;
     box-sizing: border-box;
     margin:2px 0 12px  0;
-    font-size: 16px;
-     
+    font-size: 16px;   
+}
+
+.wrapper input, select:focus{
+    outline: none;
 }
 
 .password-wrapper {
@@ -92,6 +95,7 @@ form{
     padding: 15px ;
     margin: 20px 0;
     border: 0;
+    cursor:pointer;
 }
 
 .wrapper button:hover{
@@ -139,6 +143,14 @@ form{
 
 .wrapper span{
     font-weight: 600;
+}
+
+.no-account{
+    text-align: center;
+}
+
+.no-account a{
+    color: #063b9c;
 }
 
 @media screen and (max-width:900px) {

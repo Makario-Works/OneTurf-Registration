@@ -1,0 +1,36 @@
+.admin-layout{
+    background: #F5F5F5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-content {
+    margin-top: 70px;
+    margin-left: 228px;
+    padding:0 30px;
+    flex-grow: 1;
+    overflow-y: auto;
+    flex: 1;
+    
+}
+
+.sidebar {
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+@media (max-width: 1024px) {
+  .admin-content {
+    margin-left: 200px; /* shrink margin */
+  }
+}
+
+@media (max-width: 768px) {
+  
+
+  .admin-content {
+    margin-left: 0;
+  }
+}
