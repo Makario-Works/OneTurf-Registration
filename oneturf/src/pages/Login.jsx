@@ -54,17 +54,6 @@ const Login = () => {
     } finally {
       setLoading(false);
     }
-  
-  //      const onSubmit = async (data) => {
-          
-  //   const savedUser = JSON.parse(localStorage.getItem("user"));
-
-  //   if (savedUser && savedUser.email === email && savedUser.password === password) {
-  //     alert("Login successful 🎉");
-  //     navigate("pages/Admin/DashBoard");
-  //   } else {
-  //     alert("Invalid email or password");
-  //   }
 
   };
 
@@ -81,7 +70,6 @@ const Login = () => {
                 
                 <label>Email:</label>
                 <input type="email" {...register("email")}  placeholder ='sample@oneturf.com' />
-                 {/* <input type="email" {...register("email")} value={email} onChange={(e) => setEmail(e.target.value)} required /> */}
                 <p className="error">{errors.email?.message}</p>
 
 
@@ -89,7 +77,7 @@ const Login = () => {
                 <input
                 type="password" {...register("password")}
                 />
-                {/* <input type="password" {...register("password")} value={password} onChange={(e) => setPassword(e.target.value)} required /> */}
+          
                  <p className="error">{errors.password?.message}</p>
                  <button type="submit" disabled={loading}>
                   {loading ? "Logging in..." : "Login"}
