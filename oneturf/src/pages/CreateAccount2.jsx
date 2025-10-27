@@ -70,8 +70,7 @@ const CreateAccount2 = () => {
       console.error(err);
       alert("Server error, please try again.");
     }
-    //  localStorage.setItem("user", JSON.stringify(userData));
-    // navigate("/pages/VerifyAccount");
+
   };
 
   return (
