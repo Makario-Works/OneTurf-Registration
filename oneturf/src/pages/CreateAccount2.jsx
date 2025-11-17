@@ -23,7 +23,6 @@ const schema = yup.object().shape({
     .oneOf([yup.ref("password"), null], "Passwords must match")
     .required("Confirm password is required"),
 });
-
 const CreateAccount2 = () => {
   const navigate = useNavigate();
   const [phone, setPhone] = useState("");
